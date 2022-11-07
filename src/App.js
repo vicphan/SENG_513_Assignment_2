@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 function App() {
-  // player names 
+  // player names
   const [players, set_players] = useState(["Player 1", "Player 2", "Player 3"]);
 
   const setPlayers = (players) => {
@@ -26,8 +26,8 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route exact path="/SENG_513_Assignment_2" element={<LandingPage nav={navigateToMain} setPlayers={setPlayers}/>}/>
-        <Route exact path="/SENG_513_Assignment_2/main" element={<MainPage players={players} nav={navigateToLanding} />}/>
+        <Route exact path="/" element={<LandingPage nav={navigateToMain} setPlayers={setPlayers}/>}/>
+        <Route exact path="/main" element={<MainPage players={players} nav={navigateToLanding} />}/>
       </Routes>
     </div>
   )
